@@ -15,7 +15,7 @@ jobs:
     - name: Echo one
       run: echo "Echo one comamnd"
     - name: Create annotation for build error
-        run: echo "::error file=appComamnd.js,line=7::Missing semicolon"
+      run: echo "::error file=appComamnd.js,line=7::Missing semicolon"
     - name: Echo two
       run: echo "Echo two comamnd"
     
