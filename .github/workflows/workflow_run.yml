@@ -1,0 +1,18 @@
+on:
+  workflow_run:
+    workflows: ["Build"]
+    branches:
+      - 'main'
+      
+jobs:
+  target_workflow:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Run some command
+      run: echo "Running some comamnd"
+    - name: Run more command
+      run: |
+        echo "some more commands 1"
+        echo "some more commands 2" 
