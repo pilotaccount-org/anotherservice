@@ -1,0 +1,31 @@
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'subproject/multiple_jobs.txt'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: |
+          echo 'building'
+          sleep 5
+
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: publish
+        run: |
+          echo 'publishing'
+          sleep 10
+
+  deploying:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy
+        run: |
+          echo 'deploying'
+          sleep 10
