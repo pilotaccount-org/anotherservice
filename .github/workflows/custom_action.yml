@@ -1,7 +1,8 @@
 on:
   push:
-    branch: main
-    path: "subproject/custom_action.txt"
+    branches: main
+    paths: 
+      - "subproject/custom_action.txt"
 
 jobs:
   hello_world_job:
