@@ -1,0 +1,23 @@
+name: Commands Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+    paths: 
+        - 'subproject/commands_workflow.txt'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Echo one
+      run: echo "Echo one comamnd"
+    - name: Create annotation for build error
+        run: echo "::error file=appComamnd.js,line=7::Missing semicolon"
+    - name: Echo two
+      run: echo "Echo two comamnd"
+    
+
+
