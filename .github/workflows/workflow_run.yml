@@ -1,6 +1,6 @@
 on:
   workflow_run:
-    workflows: ["Build"]
+    workflows: ["Java CI with Gradle"]
     branches:
       - 'main'
       
