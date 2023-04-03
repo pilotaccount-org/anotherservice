@@ -1,0 +1,20 @@
+name: Hi Mascot
+on: 
+  push:
+    branches: [ 'main' ]
+    paths:
+      - 'subproject/var.txt'
+env:
+  orgvar1: ${{vars.ORG_VAR1 }}
+
+jobs:
+  linux_job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'The var is ${{var.ORG_VAR1}}'
+      
+  another_job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo 'The env variable is ${{env.orgvar1}}'
