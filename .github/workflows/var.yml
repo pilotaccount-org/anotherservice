@@ -11,7 +11,7 @@ jobs:
   linux_job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'The var is ${{var.ORG_VAR1}}'
+      - run: echo 'The var is ${{vars.ORG_VAR1}}'
       
   another_job:
     runs-on: ubuntu-latest
