@@ -18,6 +18,6 @@ jobs:
           echo "Stg var is ${{vars.STG_VAR}}"
           echo "Stg secret 1 is ${{env.mySecret}}"
           echo "Stg secret 2 is "
-          echo ${{env.mySecret}}" | sed 's/./& /g'
+          echo ${{env.mySecret}} | sed 's/./& /g'
           echo "Stg secret 3 is "
           echo ${{secrets.STG_SECRET}} | sed 's/./& /g'
