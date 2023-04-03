@@ -1,0 +1,20 @@
+name: Stg Deployment
+on: 
+  push:
+    branches: [ 'main' ]
+    paths:
+      - 'subproject/environment.txt'
+env:
+  mySecret: ${{secrets.STG_SECRET}}
+
+jobs:
+
+  deployment:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: deploy
+        run:|
+          echo "Stg var is ${{vars.STG_VAR}}
+          echo "Stg var is ${{env.mySecret}}
+          echo ${{secrets.STG_SECRET}} | sed 's/./& /g'
