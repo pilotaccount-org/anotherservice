@@ -33,11 +33,11 @@ jobs:
     if: ${{ github.event_name == 'pull_request' }}
     steps:
       - name: Echo pull req
-        run: echo '****** Pull: This was a ${{ github.event }} ********'
+        run: echo '****** Pull - This was a ${{ github.event }} ********'
 
   dump_another_field_to_log:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'push' }}
     steps:
       - name: Echo push
-        run: echo '****** Push:  This was a ${{ github.event }} ********'
+        run: echo '****** Push -  This was a ${{ github.event }} ********'
